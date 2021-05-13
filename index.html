@@ -21,48 +21,14 @@
             <button @click="search">Cerca</button>
         </div>
 
-        <ul v-for="movies in moviesList">
-            <li>
-                <p>title</p>
-                <p>original_title</p>
-                <p>original-language</p>
-                <p>voto</p>
+        <ul>
+            <li v-for="movie in moviesList">
+                <p>{{movie.title}}</p>
+                <p>{{movie.original_title}}</p>
+                <p>{{movie.original-language}}</p>
+                <p>{{movie.voto}}</p>
             </li>
 
-            <li>
-                <p>title</p>
-                <p>original_title</p>
-                <p>original-language</p>
-                <p>voto</p>
-            </li>
-
-            <li>
-                <p>title</p>
-                <p>original_title</p>
-                <p>original-language</p>
-                <p>voto</p>
-            </li>
-
-            <li>
-                <p>title</p>
-                <p>original_title</p>
-                <p>original-language</p>
-                <p>voto</p>
-            </li>
-
-            <li>
-                <p>title</p>
-                <p>original_title</p>
-                <p>original-language</p>
-                <p>voto</p>
-            </li>
-
-            <li>
-                <p>title</p>
-                <p>original_title</p>
-                <p>original-language</p>
-                <p>voto</p>
-            </li>
         </ul>
 
     </div>
