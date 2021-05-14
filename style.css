@@ -4,36 +4,88 @@
     box-sizing: border-box;
 }
 
+.text-center{
+    text-align: center;
+}
+
 body{
-    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif  
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    color: grey;
+}
+
+.movies-container{
+    overflow: auto;
+    height: 100vh;
+    padding-top: 50px;
+    padding-left: 100px;
+    background-color: black;
 }
 
 .head-bar{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
     display: flex;
-    padding-right: 40px;
+    padding-left: 40px;
     background-color: black;
 }
 
 .head-bar h1 {
-    color: tomato;
+    color: darkred;
+    margin-top: 5px;
 }
 
-.head-bar input {
+.search-bar{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 40px;
+}
+
+.search-bar input {
     width: 20%;
     border-radius: 10px;
     margin: 20px;
-    border: 1px solid tomato;
+    border: 1px solid darkred;
 }
 
-.head-bar button {
+.search-bar button {
     border: none;
     background-color: transparent; 
 }
 
-.head-bar a {
-    color: tomato;  
+.search-bar a {
+    color: darkred;  
 }
 
-.head-bar i {
+.search-bar i {
     font-size: 18px;
 }
+
+ul li {
+    width: 15%;
+    display: inline-block;
+    margin: 20px;
+}
+
+.poster{
+    display: flex;
+    flex-basis: 100%;
+    background-color: teal;
+}
+
+.poster img{
+    flex-grow: 1;
+    justify-content: center;
+    box-shadow: 0 0 6px grey;
+}
+
+.caption{
+    margin-top: 10px;
+}
+
+
+
+
+
