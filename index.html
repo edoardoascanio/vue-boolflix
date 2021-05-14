@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolflix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css
     "></script>
@@ -16,17 +17,19 @@
 <body>
 
     <div id="app">
-        <div class="bar">
+        <div class="head-bar">
+             <h1>BOOLFLIX</h1>
             <input type="text" v-model="textToSearch">
-            <button @click="search">Cerca</button>
+            <button @click="search"> <a href="#"><i class="fa fa-search"></i></a> </button>
         </div>
 
         <ul>
             <li v-for="movie in moviesList">
+                <img :src="movie.poster_path" alt="">
                 <p>{{movie.title}}</p>
                 <p>{{movie.original_title}}</p>
-                <p>{{movie.original-language}}</p>
-                <p>{{movie.voto}}</p>
+                <p>{{movie.original_language}}</p>
+                <p>{{movie.vote_average}}</p>
             </li>
 
         </ul>

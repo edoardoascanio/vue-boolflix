@@ -8,7 +8,32 @@ body{
     font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif  
 }
 
-.bar{
-    padding: 20px;
-    background-color: aquamarine;
+.head-bar{
+    display: flex;
+    padding-right: 40px;
+    background-color: black;
+}
+
+.head-bar h1 {
+    color: tomato;
+}
+
+.head-bar input {
+    width: 20%;
+    border-radius: 10px;
+    margin: 20px;
+    border: 1px solid tomato;
+}
+
+.head-bar button {
+    border: none;
+    background-color: transparent; 
+}
+
+.head-bar a {
+    color: tomato;  
+}
+
+.head-bar i {
+    font-size: 18px;
 }
