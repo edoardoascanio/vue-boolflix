@@ -17,8 +17,8 @@ body{
 .movies-container{
     overflow: auto;
     height: 100vh;
-    padding-top: 50px;
-    padding-left: 100px;
+    padding-top: 60px;
+    padding-left: 140px;
     background-color: black;
 }
 
