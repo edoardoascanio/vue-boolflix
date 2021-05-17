@@ -119,6 +119,138 @@ ul li {
     color: gold;
 }
 
+@media all and (max-width: 1260px){
+ .overlay{
+    font-size: 15px;
+ }
+}
+
+@media all and (max-width: 1228px){
+
+    #original-title{
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 1106px){
+    .overlay{
+       font-size: 12px;
+    }
+
+    
+}
+
+@media all and (max-width: 1034px){
+    ul li {
+        width: 20%;
+    }
+
+    .overlay{
+        font-size: 15px;
+    }
+
+    #original-title{
+        font-size: 15px;
+    }
+
+    
+}
+
+@media all and (max-width: 941px){
+ 
+    .overlay{
+        font-size: 15px;
+    }
+
+    #original-title{
+        font-size: 12px;
+    }
+
+    .search-bar input {
+        width: 40%;
+    }
+}
+
+@media all and (max-width: 848px){
+ 
+    .overlay{
+        font-size: 12px;
+    }
+
+    #original-title{
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 794px){
+    ul li {
+        width: 25%;
+    }
+
+    .overlay{
+        font-size: 15px;
+    }
+
+    #original-title{
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 767px){
+
+    .overlay{
+        font-size: 15px;
+    }
+
+    #original-title{
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 692px){
+
+    .overlay{
+        font-size: 12px;
+    }
+
+    #original-title{
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 650px){
+    ul li {
+        width: 30%;
+    }
+}
+
+@media all and (max-width: 554px){
+    ul li {
+        width: 50%;
+    }
+
+    .search-bar input {
+        width: 60%;
+    }
+}
+
+@media all and (max-width: 362px){
+
+    .overlay{
+        font-size: 10px;
+    }
+
+    #original-title{
+        font-size: 10px;
+    }
+
+    .search-bar input {
+        width: 60%;
+    }
+}
+
+
+
 
 
 
