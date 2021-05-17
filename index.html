@@ -32,9 +32,11 @@
                         <div class="overlay">
                             <div class="caption">
                                 <strong>{{movie.title}}</strong>
-                                <p>{{movie.original_title}}</p>
+                                <p id="original-title">{{movie.original_title}}</p>
                                 <p><span :class="`flag-icon flag-icon-${getFlag(movie)}`"></span> </p>
-                                <i id="star" class="fa fa-star" v-for="star in Math.round(movie.vote_average / 2)"></i>
+                                <div class="vote">
+                                    <i id="star" class="fa fa-star" v-for="star in Math.round(movie.vote_average / 2)"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
