@@ -28,7 +28,7 @@
             <ul>
                 <li v-for="movie in moviesList.concat(tvSeriesList)">
                     <div class="poster">
-                        <img width="100":src= "`https://image.tmdb.org/t/p/w500${movie.poster_path}`" alt="">
+                        <img width="100":src="getImgSrc(movie)" alt="">
                         <div class="overlay">
                             <div class="caption">
                                 <strong>{{movie.title}}</strong>
