@@ -35,6 +35,33 @@ new Vue({
                         });
                     }    
                 })
+
+            const vote = (Math.round(vote_average) / 2)  
+        },
+
+        getFlag(movie){
+          const langFlagsMap = {
+                en:["gb","us","ca","ie","au"],
+                es:["es","ar","ct","mx"],
+                fr:["fr","be","lu","mc"],
+                pt:["pt","br","ao","cv"]
+            };
+
+            if(langFlagsMap[movie.original_language]){
+                return langFlagsMap[movie.original_language];
+            }else{
+                return movie.original_language;
+            }
+
+        },
+
+        getImgSrc(movie){
+
+           if(movie.poster_path){
+               return `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+           }else{
+               return "../img/poster_placeholder.svg"
+           }
         },
 
         search() {
@@ -46,10 +73,5 @@ new Vue({
     }
 })
 
-langFlagCountry = {
-    "en":["gb","us","ca","ie","au"],
-    "es":["es","ar","ct","mx"],
-    "fr":["fr","be","lu","mc"],
-    "pt":["pt","br","ao","cv"]
-} 
+
 

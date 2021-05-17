@@ -55,6 +55,10 @@ body{
     color: darkred;  
 }
 
+.search-bar a:hover{
+    color: grey;
+}
+
 .search-bar i {
     font-size: 18px;
 }
@@ -73,12 +77,11 @@ ul li {
 
 .poster img{
     flex-grow: 1;
-    justify-content: center;
+    align-content: center;
     box-shadow: 0 0 6px grey;
 }
 
 .caption{
-    margin-top: 50px;
     color: ivory;
 }
 
@@ -91,13 +94,18 @@ ul li {
     height: 100%;
     transition: .3s ease;
     opacity: 0;
-    font-size: 20px;
+    font-size: 15px;
     padding: 20px;
     text-align: center;
 }
 
 .poster:hover .overlay {
     opacity: 1;
+}
+
+#star{
+    margin: 2px;
+    color: gold;
 }
 
 
