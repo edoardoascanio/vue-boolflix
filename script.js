@@ -8,8 +8,6 @@ new Vue({
     },
 
 
-
-
     methods: {
 
         makeAxiosSearch(searchType) {
@@ -44,6 +42,14 @@ new Vue({
       
             this.makeAxiosSearch("movie");
             this.makeAxiosSearch("tv");
-        }
+        }, 
     }
 })
+
+langFlagCountry = {
+    "en":["gb","us","ca","ie","au"],
+    "es":["es","ar","ct","mx"],
+    "fr":["fr","be","lu","mc"],
+    "pt":["pt","br","ao","cv"]
+} 
+
