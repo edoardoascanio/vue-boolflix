@@ -7,12 +7,7 @@ new Vue({
         tvSeriesList: []
     },
 
-    langFlagCountry = {
-        "en":["gb","us","ca","ie","au"],
-        "es":["es","ar","ct","mx"],
-        "fr":["fr","be","lu","mc"],
-        "pt":["pt","br","ao","cv"]
-    }, 
+
 
 
     methods: {
