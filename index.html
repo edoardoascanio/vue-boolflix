@@ -35,7 +35,7 @@
                                 <i id="tv" class="fa fa-television" v-if="movie.tvSeries"></i>
                                 <strong>{{movie.title}}</strong>
                                 <p id="original-title">{{movie.original_title}}</p>
-                                <p><span :class="`flag-icon flag-icon-${getFlag(movie)}`"></span> </p>
+                                <p><span id="flag" :class="`flag-icon flag-icon-${getFlag(movie)}`"></span> </p>
                                 <div class="vote">
                                     <i id="star" class="fa fa-star"
                                         v-for="star in Math.round(movie.vote_average / 2)"></i>

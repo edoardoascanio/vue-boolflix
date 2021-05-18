@@ -114,6 +114,10 @@ ul li {
     opacity: 1;
 }
 
+#flag{
+    box-shadow: 0 0 2px grey;
+}
+
 #star{
     margin: 2px;
     color: gold;
