@@ -74,7 +74,7 @@ new Vue({
             if (movie.poster_path) {
                 return `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
             } else {
-                return "../img/poster_placeholder.svg"
+                return "img/poster_placeholder.svg"
             }
         },
 
