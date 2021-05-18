@@ -119,6 +119,10 @@ ul li {
     color: gold;
 }
 
+#tv{
+    margin-bottom: 10px;
+}
+
 @media all and (max-width: 1260px){
  .overlay{
     font-size: 15px;
@@ -246,6 +250,22 @@ ul li {
 
     .search-bar input {
         width: 60%;
+    }
+}
+
+
+@media all and (max-width: 320px){
+
+    .overlay{
+        font-size: 10px;
+    }
+
+    #original-title{
+        font-size: 8px;
+    }
+
+    ul li{
+        margin: 15px;
     }
 }
 

@@ -8,7 +8,8 @@
     <title>Boolflix</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    </link>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
@@ -17,34 +18,37 @@
 
     <div id="app">
         <div class="head-bar">
-             <h1>BOOLFLIX</h1>
+            <h1>BOOLFLIX</h1>
             <div class="search-bar">
-                <input type="text" v-model="textToSearch">
+                <input type="text" v-model="textToSearch" @keyup.enter="search">
                 <button @click="search"> <a href="#"><i class="fa fa-search"></i></a> </button>
             </div>
         </div>
 
         <div class="movies-container">
-            <ul>
-                <li v-for="movie in moviesList.concat(tvSeriesList)">
+            <ul v-if="!loading">
+                <li v-for="movie in fullList">
                     <div class="poster">
-                        <img width="100":src="getImgSrc(movie)" alt="">
+                        <img width="100" :src="getImgSearch(movie)" alt="">
                         <div class="overlay">
                             <div class="caption">
+                                <i id="tv" class="fa fa-television" v-if="movie.tvSeries"></i>
                                 <strong>{{movie.title}}</strong>
                                 <p id="original-title">{{movie.original_title}}</p>
                                 <p><span :class="`flag-icon flag-icon-${getFlag(movie)}`"></span> </p>
                                 <div class="vote">
-                                    <i id="star" class="fa fa-star" v-for="star in Math.round(movie.vote_average / 2)"></i>
+                                    <i id="star" class="fa fa-star"
+                                        v-for="star in Math.round(movie.vote_average / 2)"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
                 </li>
-    
             </ul>
-        </div>
+            <div v-else>
+                Ricerca in corso...
+            </div>
+        </div> 
 
     </div>
 
