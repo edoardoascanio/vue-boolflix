@@ -42,23 +42,6 @@ new Vue({
                         this.tvSeriesList = resp.data.results.map((tvShow) => {
                             tvShow.original_title = tvShow.original_name
                             tvShow.title = tvShow.name
-
-                            return tvShow
-                        });
-                    }
-                })
-
-            axios.get("https://api.themoviedb.org/3/search/" + searchType, axiosOption)
-                .then(resp => {
-
-                    if (searchType === "movie") {
-                        this.moviesList = resp.data.results;
-
-                    } else if (searchType === "tv") {
-
-                        this.tvSeriesList = resp.data.results.map((tvShow) => {
-                            tvShow.original_title = tvShow.original_name
-                            tvShow.title = tvShow.name;
                             tvShow.tvSeries = true
 
                             return tvShow
@@ -74,10 +57,8 @@ new Vue({
 
         getFlag(movie) {
             const langFlagsMap = {
-                en: ["gb", "us", "ca", "ie", "au"],
-                es: ["es", "ar", "ct", "mx"],
-                fr: ["fr", "be", "lu", "mc"],
-                pt: ["pt", "br", "ao", "cv"]
+                en: "us",
+                ja: "jp",
             };
 
             if (langFlagsMap[movie.original_language]) {
